@@ -23,7 +23,26 @@ fs.readFile('hl7.txt', function(err, data) {
 
 
 
-app.get('/msg',(req,res)=>{
+app.get('/pid',(req,res)=>{
+    final=[]
+    msg=[]
+    pid=[]
+   out=rdtxt[0].split('|')
+   out=rdtxt[1].split('|')
+ 
+msg.push(`msg:${out[0]}`,`test:${out[3]}`,`out:${out[3].split('^^^')}`)
+   var  o2=JSON.stringify({msg})
+  
+   const patientName=out[5].split('^').join(' ')
+  
+pid.push(`pid:${out[0]}`,`patient:${patientName}`,`out:${out[3].split('^^^')}`)
+    
+   o3=JSON.stringify({pid})
+   final.push({o2,o3})
+    res.send(final)
+    // console.log('json',o2)
+   })
+   app.get('/msg',(req,res)=>{
     final=[]
     msg=[]
     pid=[]
