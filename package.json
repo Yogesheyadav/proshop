@@ -1,0 +1,16 @@
+{
+  "name": "htaapi",
+  "version": "1.0.0",
+  "description": "fhir api",
+  "main": "index.js",
+  "scripts": {
+   "start":"nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodehl7": "^0.2.5",
+    "nodemon": "^2.0.12"
+  }
+}
