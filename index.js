@@ -62,9 +62,9 @@ pid.push(`pid:${out[0]}`,`patient:${patientName}`,`out:${out[3].split('^^^')}`)
     // console.log('json',o2)
    })
 
-// app.get('/pid',(req,res)=>{
-  
-// })
+app.get('/',(req,res)=>{
+  res.send("hello")
+})
 
 //     out=rdtxt[1].split('|')
 //     const patientName=out[5].split('^').join(' ')
